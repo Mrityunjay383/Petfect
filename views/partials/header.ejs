@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!--Meta Declaration-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Petfect</title>
+
+    <link rel="icon" href="/images/dogFavicon.png">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+    crossorigin="anonymous" />
+
+    <!-- Local Styling -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/header.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <!--NavBar Section -->
+    <div class="header">
+      <h1 class="name">
+        <a class="logo" href="/"><img class="headImg" src="/images/logo.jpg" alt=""> Petfect</a>
+      </h1>
+      <div class="nav-lin">
+        <!-- Nav List-->
+        <ul class="nav-ul">
+          <li><a class="nobrd" href="/">Home</a></li>
+          <li><a class="nobrd" href="/pets">Pets</a></li>
+          <li><a class="nobrd" href="/pets/finder">PetFinder</a></li>
+          <li><a class="nobrd" href="/#contactUs">Contact</a></li>
+          <% if(isLogedIn){ %>
+            <li><a class="nobrd"  href="/request">Your Requests</a></li>
+            <a href="/IList" class="dogIcon nobrd headDogIcon">
+              <i class="fas fa-dog dogHeader"></i>
+              <span class="headerIndexSpan"><%= index%></span>
+            </a>
+          <%}else{%>
+            <li>
+              <a class="brd" href="/auth/login">Login/Register</a>
+            </li>
+          <%}%>
+        </ul>
+      </div>
+      <!-- Top icon for mobile view-->
+      <div class="icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>

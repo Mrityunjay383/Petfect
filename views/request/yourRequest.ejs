@@ -1,0 +1,39 @@
+<%- include("../partials/header") -%>
+
+<section class="con">
+  <h2 class="reqPageHead">Your Requests are here</h2>
+
+  <% reqs.reverse(); for(let req of reqs){%>
+    <div class="reqCon">
+      <h4>Request #<%= req._id%></h4>
+
+      <p class="iLCon">
+        <span class="reqHead">Interest List contains:</span>
+        <ul class="iLContains">
+          <% for(let pet of req.pets){%>
+            <li><a href="/pets/pet/<%= pet.name%>"><%= pet.name%></a></li>
+          <%}%>
+        </ul>
+      </p>
+
+      <p>
+        <span class="reqHead">Budget: </span>  ₹<%= req.budget%>
+      </p>
+      <p>
+        <span class="reqHead">Age: </span> <%= req.petAge%>
+      </p>
+      <p>
+        <span class="reqHead">Gender: </span> <%= req.petGender%>
+      </p>
+      <p>
+        <span class="reqHead">Request Status: </span> <%= req.status%>
+      </p>
+      <p>
+        <span class="reqHead">Requested on: </span> <%= req.reqDate%>
+      </p>
+    </div>
+  <%}%>
+
+</section>
+
+<%- include("../partials/footer") -%>

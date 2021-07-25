@@ -1,0 +1,31 @@
+<%- include("../partials/adminHeader")-%>
+
+<section class="con">
+    <h2>Add a new Pet</h2>
+
+    <form action="/admin/addpet" method="POST">
+      <div class="form-group">
+        <label for="name">Pet Name</label>
+        <input type="text" class="form-control" name="name">
+      </div>
+      <div class="form-group">
+        <label for="temperament">Temperament (comma seprated values)</label>
+        <input type="text" class="form-control" name="temperament">
+      </div>
+      <div class="form-group">
+        <label for="lifeExpectancy">Life Expectancy</label>
+        <input type="text" class="form-control" name="lifeExpectancy">
+      </div>
+      <div class="form-group">
+        <label for="imgUrl">Image Url</label>
+        <input type="text" class="form-control" name="imgUrl">
+      </div>
+      <div class="form-group">
+        <label for="summary">Summary</label>
+        <input type="text" class="form-control" name="summary">
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</section>
+
+<%- include("../partials/adminFooter") -%>

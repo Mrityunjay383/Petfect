@@ -1,0 +1,24 @@
+<%- include("../partials/header") -%>
+
+<section class="con">
+  <h2 class="finderHead mb-5">Find a pet which best suits your requirements!!</h2>
+
+  <div id = "startBtnCon">
+    <span id="startBtn" class="redBtn boxShadow">Start</span>
+  </div>
+  <div id="questionCon" class="boxShadow hide py-2 px-3">
+    <h4 id="que" class="mb-4"></h4>
+    <div id="options">
+      <div id = "yes" class="finBtn redBtn boxShadow mr-2">Yes</div>
+      <div id = "no" class="finBtn redBtn boxShadow">No</div>
+    </div>
+  </div>
+  <p id="resCon"></p>
+
+  <br>
+  <span id="tryAgainBtn" class="redBtn boxShadow hide">Try Again</span>
+</section>
+
+
+<script type="text/javascript" src="/scripts/petFinder.js"></script>
+<%- include("../partials/footer") -%>

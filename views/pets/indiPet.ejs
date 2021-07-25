@@ -1,0 +1,27 @@
+<%- include("../partials/header") -%>
+
+<section class="con">
+
+  <div class="row indiPet">
+    <div class="col-lg-6">
+      <img class="indiPetImg" src=<%= pet.imgUrl%> alt=<%= pet.name%>>
+    </div>
+    <div class="col-lg-6 indiPetDetails">
+
+      <h2><%= pet.name%></h2>
+      <p>Qualities: <span class="values"> <%= pet.temperament%> </span> </p>
+      <p>Life Expentancy: <span class="values"> <%= pet.lifeExpectancy%> years </span></p>
+      <p class="indiPetDetailsSummary"> <%= pet.summary%> </p>
+
+      <form class="" action="/IList" method="post">
+        <button type="submit" class="bubbleBtn btnIP" name="petID" value=<%= pet._id%>>
+          <i class="fas fa-plus-circle"></i> Add to Interest List
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+</section>
+
+<%- include("../partials/footer") -%>

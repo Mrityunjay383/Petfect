@@ -1,0 +1,30 @@
+
+    <footer>
+      <div>
+        <a href="/" class="footerHomeIcon">
+          <i class="fas fa-home"></i>
+          <p>Home</p>
+        </a>
+      </div>
+      <div>
+        <a href="/pets" class="footerPetIcon">
+          <i class="fas fa-paw"></i>
+          <p>Pets</p>
+        </a>
+      </div>
+      <div class="footerIList">
+        <% if(isLogedIn){ %>
+          <a href="/IList" class="dogIcon footerdogIcon">
+            <i class="fas fa-dog"></i>
+            <span class="footerIndexSpan"><%= index%></span>
+            <p>I List</p>
+          </a>
+        <%}else{%>
+          <a class="footerAuthLink" href="/auth/login">Login<br/>/Register</a>
+        <%}%>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="/scripts/index.js"></script>
+  </body>
+</html>

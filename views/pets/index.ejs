@@ -1,0 +1,42 @@
+<%- include("../partials/header") -%>
+
+  <section class="con">
+    <h2 class="petsPageHeading">Your most loved Pets are here</h2>
+
+
+    <form class="searchForm" action="/pets/search" method="post">
+      <input id="search" type="text" name="petName" autocomplete="off" placeholder="Search breed by name">
+      <button type="submit" name="button" class="searchBtn"><i class="fas fa-search petsSearch"></i></button>
+    </form>
+    <ul id="list"></ul>
+
+    <% pets.sort((a, b) => {
+      return (b.popularity - a.popularity);
+    })%>
+
+    <div class="petsCon">
+      <% for(let pet of pets){%>
+        <div class="petCon">
+          <a href="pets/pet/<%= pet.name%>" class="magicA">
+            <img loading="lazy" src=<%= pet.imgUrl%> alt=<%= pet.name%>>
+            <h3><%= pet.name%></h3>
+            <%pet.summary = pet.summary.substring(0, 95)%>
+            <p><%= pet.summary%>...</p>
+          </a>
+          <button class="bubbleBtn">
+            <a href="pets/pet/<%= pet.name%>">Show More</a>
+          </button>
+        </div>
+      <%}%>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    const pets = <%- JSON.stringify(pets) %>;
+  </script>
+
+
+  <script type="text/javascript" src="scripts/mobileKbCheck.js"></script>
+  <script type="text/javascript" src="scripts/petsSearch.js"></script>
+
+<%- include("../partials/footer") -%>

@@ -1,0 +1,854 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #2F2E41;
+  font-family: 'Vollkorn', serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+a {
+  color: #2F2E41
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Vollkorn', serif;
+  color: rgb(152, 151, 151);
+  line-height: 1.5;
+}
+
+/* Default Styles */
+.con {
+  padding: 10vh 6%;
+  margin: 0;
+  min-height: 88vh;
+  overflow-x: hidden;
+}
+
+.authCon {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.boxShadow {
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Body Sec1 */
+.lanSec1 {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contentSec {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contentSec h2 {
+  font-size: 3.5rem;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contentSec p {
+  font-size: 1.1rem;
+}
+
+.lanImgDes {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  height: 104.5vh;
+  width: 50vw;
+}
+
+.lanImgMob {
+  display: none;
+}
+
+/* Body Sec2 */
+.lanSec2 {
+  margin: 2vh 0;
+  min-height: 50vh;
+  background: #fff;
+  overflow: hidden;
+}
+
+.workA {
+  cursor: default;
+}
+
+.featCon {
+  margin: 10vh 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feat {
+  width: 19vw;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  color: #555;
+  text-align: center;
+  cursor: pointer;
+}
+
+.feat i {
+  color: #F3AD55;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 7vh;
+}
+
+.feat h4 {
+  line-height: 1.6;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.cenBtnCon {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+/* Contact Section */
+.contactCon {
+  margin-top: 10vh;
+}
+
+.contactCon h4 {
+  margin-bottom: 5vh;
+}
+
+.contactSubCon {
+  border-left: 1px solid #FF007F;
+  padding-left: 5vw;
+}
+
+/* Auth Styling */
+.authCon h2 {
+  margin-bottom: 1vh;
+  color: #FF007F;
+}
+
+.declareS {
+  margin-bottom: 5vh;
+}
+
+.changeAuth {
+  margin-top: 5vh;
+}
+
+.changeAuth a {
+  color: #FF007F;
+  transition: 0.1s ease;
+}
+
+.changeAuth a:hover {
+  font-weight: bolder;
+  color: #333;
+  text-decoration: underline;
+}
+
+.authImg {
+  position: absolute;
+  z-index: -5;
+  bottom: 10px;
+  left: 10px;
+  width: 20vw;
+}
+.otpBtn{
+  border: 1px solid #777;
+  outline: none;
+  padding: 1px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #FFF4CE;
+  color: #555;
+  font-size: 1rem;
+  margin: 0 10px 20px;
+}
+
+/* Redirect before Login Page */
+.redirlogCon {
+  text-align: center;
+}
+
+.reH {
+  margin-bottom: 5vh;
+  font-size: 1.7rem;
+}
+
+.or {
+  margin: 8vh 0;
+}
+
+.redBtn {
+  padding: 10px 20px;
+  background: #FF007F;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redBtn:hover {
+  background: #fff;
+  color: #2F2E41;
+}
+
+/* Pets Page Styling */
+.searchForm {
+  display: flex;
+  margin-top: 5vh;
+}
+
+#search {
+  width: 30vw;
+  padding: 5px 10px;
+  border-radius: 5px 0 0 5px;
+  margin: 0;
+}
+
+.searchBtn {
+  margin: 0;
+  border: 0;
+}
+
+.petsSearch {
+  background-color: #FF007F;
+  color: #fff;
+  cursor: pointer;
+  padding: 11px;
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid #555;
+  width: 60px;
+  text-align: center;
+}
+
+.petsSearch:hover {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+#list {
+  position: absolute;
+  background: #fff;
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 0 0 5px 5px;
+}
+
+#list li {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#list li:hover {
+  color: #FF007F;
+  font-weight: bolder;
+}
+
+.petsCon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12vh;
+}
+
+.petCon {
+  width: 23vw;
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  margin-bottom: 15vh;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.petCon:hover {
+  transform: translateY(-15px) scale(1.08);
+}
+
+.magicA:hover {
+  color: #FF007F;
+}
+
+.petCon img, .indiPetImg {
+  width: 100%;
+}
+
+.petCon p {
+  margin: 10px 0 20px;
+}
+
+.indiPet {
+  margin-top: 10vh;
+}
+
+.indiPetDetails p {
+  color: #777;
+  margin: 6vh 0;
+}
+
+.values {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.indiPetDetailsSummary {
+  font-size: 1.1rem;
+}
+
+/* Pet Finder Styling */
+.hide{
+  display: none;
+}
+#questionCon{
+  height: auto;
+  width: 50%;
+}
+.finBtn{
+  display: inline-block;
+  padding: 5px 15px
+}
+
+/* IList Styling */
+.iListPetCon {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  width: 90%;
+  margin: 10vh 0;
+  padding: 0px 0px;
+  box-shadow: 0px 3px 1.5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.iListPetCon img {
+  height: 100%;
+}
+
+.reqForm {
+  margin-top: 10vh;
+  position: sticky;
+  top: 15vh;
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px;
+}
+
+.reqFormLable {
+  font-size: 1.5rem;
+}
+
+.iListSub {
+  margin-top: 15px;
+}
+
+.reqFormLable span {
+  font-size: 1rem;
+}
+
+.reqForm p {
+  font-size: 0.8rem;
+  margin: 10px 0 20px;
+}
+
+.reqmSel {
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 5px;
+  color: #98979A;
+}
+
+/* Request Styling */
+.reqConfCon {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reqCon {
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px;
+  margin: 10vh 0;
+}
+
+.reqHead {
+  color: #212121;
+  font-size: 1.2rem;
+}
+
+.iLCon {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.iLContains {
+  margin-left: 8vw;
+  margin-bottom: 20px;
+}
+
+.iLContains a:hover {
+  font-weight: bolder;
+  color: #FF007F;
+}
+
+.reqPetImg {
+  height: 10vh;
+}
+
+/* 404 Not Found Page */
+.con404 {
+  text-align: center;
+}
+
+.con404 h2 {
+  font-size: 4rem;
+}
+
+.con404 p {
+  font-size: 1.8rem;
+  width: 50%;
+  margin: 5vh auto;
+}
+
+.img404 {
+  width: 25vw;
+  margin-top: 5vh;
+}
+
+/* Admin Styling */
+/* Admin Request Styling*/
+.admimReqCon {
+  display: flex;
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px 30px;
+  margin: 10vh 0;
+}
+
+.adReqUserCon {
+  margin-right: 10vw;
+}
+
+/* Footer Styling */
+footer {
+  position: sticky;
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0px -3px 2px 1px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+footer div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 10px 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footerdogIcon i, .footerHomeIcon i, .footerPetIcon i {
+  font-size: 1.5rem;
+}
+
+.footerIndexSpan {
+  position: relative;
+  top: -15px;
+  left: -35px;
+}
+
+.footerAuthLink {
+  color: #ff007f;
+  font-weight: bolder;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 1130px) {
+  .lanImgDes {
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .lanImgDes {
+    display: none;
+  }
+
+  .lanImgMob {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 50vw;
+  }
+
+  .contentSec {
+    width: 60vw;
+    height: auto;
+  }
+
+  .contentSec p {
+    font-size: 1rem;
+    margin: 2vh 0 10vh;
+  }
+
+  .featCon {
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+
+  .feat {
+    width: 25vw;
+    margin-bottom: 50px;
+  }
+
+  .contactCon {
+    margin-top: 0;
+  }
+
+  .contactSubCon {
+    border-left: none;
+    padding-left: 15px;
+    margin-top: 8vh;
+  }
+
+  #search {
+    width: 45vw;
+  }
+
+  .petCon {
+    width: 40vw;
+  }
+
+  .indiPetImg {
+    width: 70%;
+  }
+
+  .iListCon {
+    flex-direction: column-reverse;
+  }
+
+  .iListReqCon {
+    margin-bottom: 10vh;
+  }
+
+  .indiPet {
+    margin-top: 0;
+  }
+
+  .con404 p {
+    width: 85%;
+  }
+
+  .img404 {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .contentSec {
+    width: 75vw;
+  }
+
+  .contentSec h2 {
+    font-size: 3.2rem;
+  }
+
+  .feat {
+    width: 35vw;
+  }
+
+  .authCon {
+    width: 75vw;
+  }
+
+  .authImg {
+    display: none;
+  }
+
+  .petsPageHeading {
+    text-align: center;
+  }
+
+  .searchForm {
+    justify-content: center;
+  }
+
+  #search {
+    width: 53vw;
+  }
+
+  #list {
+    left: 18vw;
+  }
+
+  .petsCon {
+    justify-content: center;
+  }
+
+  .petCon {
+    width: 60vw;
+  }
+
+  .indiPetImg {
+    width: 80%;
+  }
+
+  #questionCon{
+    width: 75%;
+  }
+
+  .con404 h2 {
+    font-size: 3.5rem;
+  }
+
+  .con404 p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .img404 {
+    width: 50vw;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  .headDogIcon {
+    display: none;
+  }
+
+  .iListPetCon {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .lanImgMob {
+    bottom: 30px;
+  }
+
+  .contentSec {
+    width: 100%;
+  }
+
+  .contentSec h2 {
+    font-size: 2.4rem;
+  }
+
+  .contentSec p {
+    font-size: 0.9rem;
+  }
+
+  .feat {
+    width: 60vw;
+  }
+
+  .authCon {
+    width: 90vw;
+  }
+
+  #search {
+    width: 67vw;
+  }
+
+  #list {
+    left: 8vw;
+  }
+
+  .petCon {
+    width: 80vw;
+  }
+
+  .indiPetImg {
+    width: 100%;
+  }
+
+  .iListPetCon h3 {
+    font-size: 1.5rem;
+  }
+  .reqConfCon h3{
+    text-align: center;
+  }
+  .reqForm {
+    padding: 15px 8px;
+    margin-top: 5vh;
+  }
+  .finderHead{
+    font-size: 1.5rem;
+  }
+  #questionCon{
+    width: 100%;
+  }
+  #que{
+    font-size: 1.2rem;
+  }
+  .btnIL {
+    font-size: 0.7rem;
+  }
+
+  .iListPetsCon {
+    margin-top: 5vh;
+  }
+
+  .iListPetCon img {
+    width: 30%;
+  }
+
+  .iListPetCon {
+    margin: 7vh 0 15vh;
+  }
+
+  .reqCon h4 {
+    font-size: 1.2rem;
+  }
+
+  .reqHead {
+    font-size: 1rem;
+  }
+
+  .iLContains {
+    font-size: 0.9rem;
+    margin-left: 12vw;
+  }
+
+  .con404 h2 {
+    font-size: 2.8rem;
+  }
+
+  .con404 p {
+    font-size: 1rem;
+  }
+
+  .img404 {
+    width: 70vw;
+  }
+
+  .footerdogIcon i, .footerHomeIcon i, .footerPetIcon i {
+    font-size: 1.2rem;
+  }
+
+  .footerIndexSpan {
+    top: -11px;
+    left: -32px;
+  }
+
+  footer p, .footerAuthLink {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .con {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .lanImgMob {
+    bottom: 21px;
+  }
+
+  .contentSec {
+    text-align: center;
+  }
+
+  .contentSec h2 {
+    font-size: 2.3rem;
+  }
+
+  .contentSec p {
+    font-size: 0.8rem;
+    margin-bottom: 5vh;
+  }
+
+  .lanSec1 button {
+    margin-left: 20vw;
+  }
+
+  .feat {
+    width: 70vw;
+  }
+
+  .petCon {
+    width: 100vw;
+    margin-bottom: 10vh;
+  }
+
+  .indiPetDetails {
+    padding: 0 7vw;
+  }
+
+  .indiPetDetails h2 {
+    font-size: 1.7rem;
+  }
+
+  .indiPetDetails p {
+    margin: 4vh 0;
+  }
+
+  .values {
+    font-size: 1.1rem;
+  }
+
+  .indiPetDetailsSummary {
+    font-size: 0.9rem;
+  }
+
+  .iListReqCon h2 {
+    /* margin-top: 6vh; */
+    font-size: 1.8rem;
+  }
+
+  .reqFormLable {
+    font-size: 1.2rem;
+  }
+
+  .reqPageHead {
+    font-size: 1.6rem;
+  }
+
+  .reqCon h4 {
+    font-size: 1.1rem;
+  }
+
+  .con404 h2 {
+    font-size: 2.6rem;
+  }
+
+  .con404 p {
+    font-size: 0.9rem;
+  }
+}

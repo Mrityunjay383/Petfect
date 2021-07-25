@@ -1,0 +1,64 @@
+<%- include("../partials/header") -%>
+
+<section class="con">
+
+  <div class="row iListCon">
+    <div class="col-lg-8 iListPetsCon">
+      <h2>Interest List</h2>
+      <% for(let pet of iListPets.pets){%>
+        <div class="iListPetCon">
+          <div class="">
+            <h3><%= pet.name%></h3>
+
+            <form class="" action="/IList/rm" method="post">
+              <button type="submit" class="btn btn-dark iListSub" name="petID" value=<%= pet.petID%>>
+                Remove
+              </button>
+            </form>
+
+          </div>
+          <img src=<%= pet.imgUrl%> alt="">
+        </div>
+      <%}%>
+    </div>
+
+    <!-- Requirements Container -->
+    <div class="col-lg-4 iListReqCon">
+      <h2>Requirements</h2>
+      <form class="reqForm" action="/request" method="post">
+        <%if(index > 0){%>
+          <div class="form-group">
+            <label class="reqFormLable" for="petAge">Pet's Age:</label>
+            <select class="reqmSel" name="petAge">
+              <option value="Below 3 Months">Below 3 Months</option>
+              <option value="3 to 12 Months">3 to 12 Months</option>
+              <option value="Above 12 Months">Above 12 Months</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="reqFormLable" for="petGender">Pet's Gender:</label>
+            <select class="reqmSel" name="petGender">
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="reqFormLable" for="budget">Your Budget <span>(in INR)</span> :</label>
+            <input type="number" class="form-control" name="budget" min="5000" value="15000" required>
+            <p>
+              <strong>Note :-</strong> You will get pets options based on your <strong>Budget</strong> and <strong>Requirements</strong>.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-dark" name="button">Submit Request</button>
+        <%}%>
+      </form>
+      <%if(index <= 0){%>
+        <p>Your List Contain 0 pets, <a href="/pet">add some</a></p>
+      <%}%>
+    </div>
+  </div>
+
+</section>
+
+<%- include("../partials/footer") -%>

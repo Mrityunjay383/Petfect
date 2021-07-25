@@ -1,0 +1,61 @@
+<%- include("../partials/adminHeader") -%>
+
+<section class="con">
+
+  <h2>All Requests</h2>
+
+  <%reqs.reverse(); for(let req of reqs){%>
+    <div class="admimReqCon">
+      <div class="adReqUserCon">
+        <h3>User</h3>
+        <p>
+          <span class="reqHead">Name:</span>  <%= req.user.name%>
+        </p>
+        <p>
+          <span class="reqHead">Email:</span>  <%= req.user.username%>
+        </p>
+        <p>
+          <span class="reqHead">WhatsApp Number:</span>  <%= req.user.pNumber%>
+        </p>
+        <p>
+          <span class="reqHead">Address:</span>  <%= req.user.address.line1%>, <br/><%= req.user.address.line2%>, <br/><%= req.user.address.city%>, <br/><%= req.user.address.state%> <%= req.user.address.postalCode%>
+        </p>
+
+
+      </div>
+      <div class="adReqPetCon">
+        <h3>Requirements</h3>
+
+        <p>
+          <span class="reqHead">Interest List:</span>
+          <span>
+            <% for(let pet of req.requ.pets){%>
+              <a href="pets/<%= pet.petID%>" class="reqPet">
+                <img class="reqPetImg" src=<%= pet.imgUrl%> alt="">
+                <%= pet.name%>
+              </a>
+            <%}%>
+          </span>
+        </p>
+
+        <p>
+          <span class="reqHead">Budget:</span>  ₹<%= req.requ.budget%>
+        </p>
+        <p>
+          <span class="reqHead">Age:</span> <%= req.requ.petAge%>
+        </p>
+        <p>
+          <span class="reqHead">Gender:</span> <%= req.requ.petGender%>
+        </p>
+        <p>
+          <span class="reqHead">Request Status:</span> <%= req.requ.status%>
+        </p>
+
+      </div>
+    </div>
+  <%}%>
+
+</section>
+
+
+<%- include("../partials/adminFooter") -%>
