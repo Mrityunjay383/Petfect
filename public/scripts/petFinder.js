@@ -29,8 +29,7 @@ const originalPetsQualitiesDb = [
   {"name": "Saint Bernard", "smallSpace": true, "firstTimer": false, "alone": false, "friendly": true, "friendlyToStrangers": true, 'bigSize': true, "easyToTrain": false, "energy": true},
   {"name": "Chow Chow", "smallSpace": true, "firstTimer": false, "alone": true, "friendly": false, "friendlyToStrangers": false, 'bigSize': false, "easyToTrain": true, "energy": false},
   {"name": "Dalmatian", "smallSpace": false, "firstTimer": true, "alone": true, "friendly": true, "friendlyToStrangers": true, 'bigSize': true, "easyToTrain": true, "energy": true},
-  {"name": "Bulldog", "smallSpace": true, "firstTimer": true, "alone": true, "friendly": false, "friendlyToStrangers": true, 'bigSize': false, "easyToTrain": true, "energy": false},
-  {"name": "Pit Bull Terrier", "smallSpace": true, "firstTimer": false, "alone": false, "friendly": false, "friendlyToStrangers": true, 'bigSize': true, "easyToTrain": true, "energy": true}
+  {"name": "Bulldog", "smallSpace": true, "firstTimer": true, "alone": true, "friendly": false, "friendlyToStrangers": true, 'bigSize': false, "easyToTrain": true, "energy": false}
 ];
 
 petsQualitiesDB = originalPetsQualitiesDb;
