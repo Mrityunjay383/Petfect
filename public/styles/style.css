@@ -49,6 +49,24 @@ p {
   box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* CountDown Styling */
+.countDown {
+  width: 75%;
+  margin: 20vh auto 5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.indiCountDiv {
+  text-align: center;
+  width: 10vw;
+}
+
+.dynamic {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
 /* Body Sec1 */
 .lanSec1 {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
@@ -180,7 +198,8 @@ p {
   left: 10px;
   width: 20vw;
 }
-.otpBtn{
+
+.otpBtn {
   border: 1px solid #777;
   outline: none;
   padding: 1px 5px;
@@ -298,10 +317,12 @@ p {
   width: 100%;
   height: 30vh;
 }
-.indiPetImg{
+
+.indiPetImg {
   width: 100%;
   height: 60vh;
 }
+
 .petCon p {
   margin: 10px 0 20px;
 }
@@ -326,14 +347,16 @@ p {
 }
 
 /* Pet Finder Styling */
-.hide{
+.hide {
   display: none;
 }
-#questionCon{
+
+#questionCon {
   height: auto;
   width: 50%;
 }
-.finBtn{
+
+.finBtn {
   display: inline-block;
   padding: 5px 15px
 }
@@ -498,6 +521,12 @@ footer p {
   font-weight: bolder;
 }
 
+/* CountDown Class */
+.indiCountDiv p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 /* Responsive Styling */
 @media screen and (max-width: 1130px) {
   .lanImgDes {
@@ -582,6 +611,10 @@ footer p {
 }
 
 @media screen and (max-width: 670px) {
+  .countDown {
+    width: 100%;
+  }
+
   .contentSec {
     width: 75vw;
   }
@@ -630,7 +663,7 @@ footer p {
     width: 80%;
   }
 
-  #questionCon{
+  #questionCon {
     width: 75%;
   }
 
@@ -661,6 +694,14 @@ footer p {
 }
 
 @media screen and (max-width: 490px) {
+  .countDown {
+    margin-top: 10vh;
+  }
+
+  .indiCountDiv p {
+    margin: 0;
+  }
+
   .lanImgMob {
     bottom: 30px;
   }
@@ -704,22 +745,28 @@ footer p {
   .iListPetCon h3 {
     font-size: 1.5rem;
   }
-  .reqConfCon h3{
+
+  .reqConfCon h3 {
     text-align: center;
   }
+
   .reqForm {
     padding: 15px 8px;
     margin-top: 5vh;
   }
-  .finderHead{
+
+  .finderHead {
     font-size: 1.5rem;
   }
-  #questionCon{
+
+  #questionCon {
     width: 100%;
   }
-  #que{
+
+  #que {
     font-size: 1.2rem;
   }
+
   .btnIL {
     font-size: 0.7rem;
   }

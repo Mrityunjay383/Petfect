@@ -1,0 +1,32 @@
+<%- include("partials/adminHeader") -%>
+
+  <section class="con con404">
+    <h2>We will be live in!</h2>
+
+    <div class="countDown">
+      <div class="indiCountDiv">
+        <span class="dynamic day">-</span>
+        <p>Day</p>
+      </div>
+      <div class="indiCountDiv">
+        <span class="dynamic hour">-</span>
+        <p>Hour</p>
+      </div>
+      <div class="indiCountDiv">
+        <span class="dynamic min">-</span>
+        <p>Minute</p>
+      </div>
+      <div class="indiCountDiv">
+        <span class="dynamic sec">-</span>
+        <p>Second</p>
+      </div>
+    </div>
+
+    <img class="img404" src="/images/dogWalking.svg" alt="Dog Walking">
+  </section>
+
+  <!--Local Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/countdown.js"></script>
+
+<%- include("partials/adminFooter") -%>

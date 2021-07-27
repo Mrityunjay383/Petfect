@@ -4,13 +4,17 @@ const { isLogedIn } = require('../Midlewares/auth');
 const { iListIndex } = require('../Midlewares/ilist');
 const { recieveMessage } = require('../Midlewares/nodemailer');
 
-router.get("/", isLogedIn, iListIndex, (req, res) => {
+router.get("/home", isLogedIn, iListIndex, (req, res) => {
 
   if(req.isAuthenticated()){
     res.render("index", {isLogedIn: req.isLogedIn, index: req.index, user: req.user});
   }else{
     res.render("index", {isLogedIn: req.isLogedIn, index: req.index});
   }
+});
+
+router.get("/", (req, res) => {
+  res.render("commingSoon");
 });
 
 router.post("/contact", (req, res, next) => {
