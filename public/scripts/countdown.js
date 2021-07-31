@@ -3,8 +3,8 @@ const renderHour = document.querySelector(".hour");
 const renderMin = document.querySelector(".min");
 const renderSec = document.querySelector(".sec");
 
+const timeOnLive = new Date("August 10, 2021 12:00:00").getTime();
 const countDown = () => {
-  const timeOnLive = new Date("August 10, 2021 00:00:00").getTime();
   const currentTime = new Date().getTime();
 
   const diff = timeOnLive - currentTime;
