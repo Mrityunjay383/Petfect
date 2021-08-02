@@ -25,5 +25,30 @@ const countDown = () => {
   renderSec.innerText = disSec;
 };
 
-
 setInterval(countDown, 1000);
+
+
+
+const notiBtn = $(".notiBtn");
+const notiEmail = $(".notiEmail");
+const notiDiv = $(".notiDiv");
+
+notiBtn.on("click", () => {
+
+  if(notiEmail.val() != ""){
+    const url = "/noti/"+notiEmail.val();
+
+    $.ajax({
+      type : 'GET',
+      url : url,
+      success: function (data) {
+        console.log(data.status);
+        notiDiv.css("display", "none");
+        $(".sendS").css("margin-top", "10vh");
+        $(".sendS").css("opacity", "1");
+      }
+    });
+  }else{
+    alert("Plese enter an Email Address.");
+  }
+});
