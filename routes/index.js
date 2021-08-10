@@ -4,7 +4,6 @@ const { isLogedIn } = require('../Midlewares/auth');
 const { iListIndex } = require('../Midlewares/ilist');
 const { recieveMessage } = require('../Midlewares/nodemailer');
 
-const Noti = require("../models/noti");
 
 router.get("/", isLogedIn, iListIndex, (req, res) => {
 
