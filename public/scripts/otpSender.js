@@ -13,12 +13,12 @@ otpBtn.on("click", () => {
       url : url,
       success: function (data) {
         otp = data.otp;
+        const alertMessage = "Check OTP on your email Id: "+emailId;
+        alert(alertMessage);
 			}
 		});
 
 
-    const alertMessage = "Check OTP on your email Id: "+emailId;
-    alert(alertMessage);
     otpBtn.css("display", "none");
   }else{
     alert("Please Fill all the fields");

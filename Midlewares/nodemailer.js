@@ -13,8 +13,8 @@ function recieveMessage(req, res){
     service: 'gmail',
     secureConnection: true,
     auth: {
-      user: 'mrityunjayvyasmhl@gmail.com',
-      pass: 'bsgyfpjawmvxajtn'
+      user: 'petfect1001@gmail.com',
+      pass: 'pcxnwevtmmegabog'
     },
     tls: {
       // do not fail on invalid certs
@@ -24,8 +24,8 @@ function recieveMessage(req, res){
   });
 
   var mailOptions = {
-    from:  `${req.contactDetails.name} <mrityunjayvyasmhl@gmail.com>`,
-    to: `mrityunjayvyasbhl@gmail.com`, //Change reciving email here
+    from:  `${req.contactDetails.name} <no-reply@petfect.in>`,
+    to: `contact@petfect.in`, //Change reciving email here
     subject: `${req.contactDetails.subject}`,
     text: '',
     html: output

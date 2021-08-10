@@ -142,6 +142,14 @@ p {
 .contactCon h4 {
   margin-bottom: 5vh;
 }
+.contactInfoCon p{
+  /* color: #2F2E41; */
+}
+.contactInfoCon span{
+  font-size: 1.5rem;
+  color: #2F2E41;
+  margin-left: 10px;
+}
 
 .contactSubCon {
   border-left: 1px solid #FF007F;
@@ -389,6 +397,15 @@ p {
   color: #98979A;
 }
 
+/* Spec Pet Style */
+.specCS {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin: 10vh 0;
+  padding: 5vh 0;
+}
+
 /* Request Styling */
 .reqConfCon {
   height: 40vh;
@@ -586,7 +603,6 @@ footer p {
 }
 
 @media screen and (max-width: 670px) {
-
   .contentSec {
     width: 75vw;
   }
@@ -666,7 +682,6 @@ footer p {
 }
 
 @media screen and (max-width: 490px) {
-
   .lanImgMob {
     bottom: 30px;
   }
@@ -734,6 +749,13 @@ footer p {
 
   .btnIL {
     font-size: 0.7rem;
+  }
+
+  .specCon h2{
+    font-size: 1.4rem;
+  }
+  .specCS{
+    font-size: 1.5rem;
   }
 
   .iListPetsCon {

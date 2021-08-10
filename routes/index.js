@@ -6,7 +6,7 @@ const { recieveMessage } = require('../Midlewares/nodemailer');
 
 const Noti = require("../models/noti");
 
-router.get("/home", isLogedIn, iListIndex, (req, res) => {
+router.get("/", isLogedIn, iListIndex, (req, res) => {
 
   if(req.isAuthenticated()){
     res.render("index", {isLogedIn: req.isLogedIn, index: req.index, user: req.user});
@@ -15,19 +15,6 @@ router.get("/home", isLogedIn, iListIndex, (req, res) => {
   }
 });
 
-router.get("/", (req, res) => {
-  res.render("commingSoon");
-});
-router.get("/noti/:emailId", (req, res) => {
-  const emailId = req.params.emailId;
-
-  let newNoti = new Noti({
-    emailId: emailId
-  });
-  newNoti.save((err) => {
-    res.json({status: "Sucess"})
-  });
-});
 
 router.post("/contact", (req, res, next) => {
   req.contactDetails = {

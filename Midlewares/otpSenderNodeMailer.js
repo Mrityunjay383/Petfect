@@ -5,7 +5,10 @@ function sendOtp(emailId){
   let otp = Math.floor(Math.random() * 10000);
 
   const output = `
-      <p>Your Otp for registering on Petfect is: ${otp}</p>
+    <div style="text-align: center">
+      <h3>OTP: ${otp}</h3>
+      <p><b>Thank you for showing interest in Petfect.</b></p>
+    </div>
   `;
 
   var transporter = nodemailer.createTransport({
@@ -13,8 +16,8 @@ function sendOtp(emailId){
     service: 'gmail',
     secureConnection: true,
     auth: {
-      user: 'mrityunjayvyasmhl@gmail.com',
-      pass: 'bsgyfpjawmvxajtn'
+      user: 'petfect1001@gmail.com',
+      pass: 'pcxnwevtmmegabog'
     },
     tls: {
       // do not fail on invalid certs
@@ -24,9 +27,9 @@ function sendOtp(emailId){
   });
 
   var mailOptions = {
-    from:  `<mrityunjayvyasmhl@gmail.com>`,
+    from:  `Petfect<no-reply@petfect.in>`,
     to: emailId, //Change reciving email here
-    subject: `Petfect Register`,
+    subject: `OTP for Registration`,
     text: '',
     html: output
   };
