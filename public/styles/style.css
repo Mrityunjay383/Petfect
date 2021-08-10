@@ -142,15 +142,18 @@ p {
 .contactCon h4 {
   margin-bottom: 5vh;
 }
-.contactInfoCon p{
-  /* color: #2F2E41; */
-}
+
 .contactInfoCon span{
   font-size: 1.5rem;
   color: #2F2E41;
   margin-left: 10px;
 }
-
+.socialIcons{
+  margin-top: 40px;
+  width: 50%;;
+  display: flex;
+  justify-content: space-between;
+}
 .contactSubCon {
   border-left: 1px solid #FF007F;
   padding-left: 5vw;
@@ -701,6 +704,14 @@ footer p {
   .feat {
     width: 60vw;
   }
+  .contactInfoCon span{
+    font-size: 1.2rem;
+  }
+  .socialIcons{
+    margin-top: 30px;
+    width: 90%;
+  }
+
 
   .authCon {
     width: 90vw;
