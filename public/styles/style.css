@@ -92,6 +92,10 @@ p {
   overflow: hidden;
 }
 
+.lanSec2 h3{
+  font-size: 2.2rem;
+}
+
 .workA {
   cursor: default;
 }
@@ -628,6 +632,11 @@ footer p {
     text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   }
 
+  .lanSec2 h3{
+    font-size: 2rem;
+    margin-bottom: 10vh;
+  }
+
   .feat {
     width: 35vw;
   }
@@ -713,6 +722,9 @@ footer p {
 
   .contentSec p {
     font-size: 0.9rem;
+  }
+  .lanSec2 h3{
+    text-align: center;
   }
 
   .feat {
@@ -865,6 +877,9 @@ footer p {
 
   .lanSec1 button {
     margin-left: 20vw;
+  }
+  .lanSec2 h3{
+    font-size: 1.7rem;
   }
 
   .feat {
