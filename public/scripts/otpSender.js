@@ -34,3 +34,13 @@ regBtn.on("click", (e) => {
     otpBtn.css("display", "inline-block");
   }
 });
+
+$("#addCheck").on("click", () => {
+  if($("#addCheck").prop('checked') == true){
+      $(".addCon").css("display", "block");
+      $(".addCon input").prop('required',true);
+  }else{
+    $(".addCon").css("display", "none");
+    $(".addCon input").prop('required',false);
+  }
+});

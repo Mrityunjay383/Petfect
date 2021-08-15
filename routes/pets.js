@@ -6,6 +6,7 @@ const { iListIndex } = require('../Midlewares/ilist');
 const Pet = require("../models/pet");
 
 router.get("/", iListIndex, (req, res) => {
+  req.session.backUrl = undefined;
   Pet.find((err, foundPets) => {
     res.render("pets/index", {pets: foundPets, isLogedIn: req.isLogedIn, index: req.index});
   });

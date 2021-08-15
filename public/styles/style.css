@@ -143,20 +143,24 @@ p {
   margin-bottom: 5vh;
 }
 
-.contactInfoCon span{
+.contactInfoCon span {
   font-size: 1.5rem;
   color: #2F2E41;
   margin-left: 10px;
 }
-.socialIcons{
+
+.socialIcons {
   margin-top: 40px;
-  width: 50%;;
+  width: 50%;
+  ;
   display: flex;
   justify-content: space-between;
 }
-.socialIcons i{
+
+.socialIcons i {
   color: #F3AD55;
 }
+
 .contactSubCon {
   border-left: 1px solid #FF007F;
   padding-left: 5vw;
@@ -193,6 +197,12 @@ p {
   bottom: 10px;
   left: 10px;
   width: 20vw;
+}
+.addCheckCon{
+  margin: 15px 0 12px;
+}
+.addCon{
+  display: none;
 }
 
 .otpBtn {
@@ -708,17 +718,22 @@ footer p {
   .feat {
     width: 60vw;
   }
-  .contactInfoCon span{
+
+  .contactInfoCon span {
     font-size: 1.2rem;
   }
-  .socialIcons{
+
+  .socialIcons {
     margin-top: 30px;
     width: 90%;
   }
 
-
   .authCon {
     width: 90vw;
+  }
+
+  .declareS {
+    font-size: 0.9rem;
   }
 
   #search {
@@ -766,10 +781,11 @@ footer p {
     font-size: 0.7rem;
   }
 
-  .specCon h2{
+  .specCon h2 {
     font-size: 1.4rem;
   }
-  .specCS{
+
+  .specCS {
     font-size: 1.5rem;
   }
 
@@ -839,11 +855,11 @@ footer p {
   }
 
   .contentSec h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .contentSec p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 5vh;
   }
 
@@ -853,6 +869,10 @@ footer p {
 
   .feat {
     width: 70vw;
+  }
+
+  .declareS {
+    font-size: 0.7rem;
   }
 
   .petCon {
