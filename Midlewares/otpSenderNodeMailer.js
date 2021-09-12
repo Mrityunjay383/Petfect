@@ -27,7 +27,7 @@ function sendOtp(emailId){
   });
 
   var mailOptions = {
-    from:  `Petfect<no-reply@petfect.in>`,
+    from:  `Petfect<petfect1001@gmail.com>`,
     to: emailId, //Change reciving email here
     subject: `OTP for Registration`,
     text: '',
