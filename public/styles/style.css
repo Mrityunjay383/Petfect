@@ -79,7 +79,18 @@ p {
   height: 104.5vh;
   width: 50vw;
 }
-
+.ligBtn{
+  padding: 10px 18px;
+  box-shadow: hsla(210, 40%, 52%, .4) 2px 2px 22px;
+  margin-left: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.ligBtn:hover{
+  color: #fff;
+  background: #FF007F;
+  transition: 0.5s ease-out;
+}
 /* Body Sec2 */
 .lanSec2 {
   margin: 2vh 0;
@@ -848,7 +859,11 @@ footer p {
   .contentSec {
     text-align: center;
   }
-
+  .ligBtn{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 30vw;
+  }
   .contentSec h2 {
     font-size: 2rem;
   }
