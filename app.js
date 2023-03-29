@@ -5,6 +5,7 @@ const ejs = require("ejs");
 const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
+const cookieParser = require("cookie-parser");
 
 
 // Routers
@@ -23,11 +24,17 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
+app.use(cookieParser());
+app.enable('trust proxy'); // add this line
 app.use(session({
   secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true,
+  proxy: true, // add this line
+  cookie: {
+    secure: true,
+    maxAge: 3600000,
+  }
 }));
 
 app.use(passport.initialize());
